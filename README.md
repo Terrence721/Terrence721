@@ -1,12 +1,12 @@
 # Terrence Daniels
 
-Senior Full-Stack Engineer — Laravel/PHP backend, React/Inertia frontend, containerized infrastructure.
+Principal Full-Stack Engineer — Laravel/PHP backend, React/Inertia frontend, containerized infrastructure.
 
 **[LinkedIn](https://www.linkedin.com/in/terrence-daniels)** · **[Portfolio hub ↗](https://terrence721.github.io/)**
 
 ## Featured projects
 
-### [coolify-full](https://github.com/Terrence721/coolify-full) — Senior Full-Stack Engineering Demonstration
+### [coolify-full](https://github.com/Terrence721/coolify-full) — Principal Full-Stack Engineering Demonstration
 
 An enhanced fork of Coolify (a self-hostable Heroku/Vercel alternative) used as a technical portfolio piece: a live, real-world Laravel monolith modernized incrementally rather than rewritten from scratch.
 
@@ -17,7 +17,7 @@ An enhanced fork of Coolify (a self-hostable Heroku/Vercel alternative) used as 
 
 Every claim in that repo's README is checkable against its own commit history — see the README's "Reading the commit history" section for exactly how.
 
-### [platform-main](https://github.com/Terrence721/platform-main) — Senior Frontend Engineering Demonstration
+### [platform-main](https://github.com/Terrence721/platform-main) — Principal Frontend Engineering Demonstration
 
 A from-scratch rebuild of NgRx's core state-management libraries, module by module: real, MIT-licensed source ported where fidelity to a battle-tested implementation matters, and specific classes deliberately redesigned where the original violates its own interface.
 
