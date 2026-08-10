@@ -27,3 +27,13 @@ A from-scratch rebuild of NgRx's core state-management libraries, module by modu
 - **6 CodeQL security findings** (ReDoS + prototype pollution) found and fixed in ported source, landed through a real Pull Request
 
 Every claim in that repo's README/case study is checkable against its own commit history and live CI — see [`docs/case-study.md`](https://github.com/Terrence721/platform-main/blob/main/docs/case-study.md) for the full writeup.
+
+### [saga-full](https://github.com/Terrence721/saga-full) — Distributed Saga Microservice Platform *(in progress)*
+
+A from-scratch implementation of the Distributed Saga pattern across independent microservices — order placement, payment, and fulfillment, coordinated with compensating transactions instead of a shared database transaction. Early stage: build tooling and the first module are in place and verified with a real build; the remaining services are being built one file at a time, with the reasoning behind each decision recorded as it happens.
+
+- **Gradle 9.7.0 + JDK 25** build verified end-to-end for the first module (`user-contract`), including two real issues found and fixed along the way — a Gradle/JDK version incompatibility, and a JDK symbol removed since Java 11
+- Original gRPC contract design, not a copy of any reference material used only for the module layout
+- Full reasoning for every decision recorded in [`docs/architecture.md`](https://github.com/Terrence721/saga-full/blob/main/docs/architecture.md), progress tracked in [`todo.md`](https://github.com/Terrence721/saga-full/blob/main/todo.md), and work tracked on a public [project board](https://github.com/users/Terrence721/projects/3)
+
+This one's genuinely early — see `todo.md` for current status rather than assuming it's finished.
