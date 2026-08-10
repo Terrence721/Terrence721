@@ -28,7 +28,7 @@ A from-scratch rebuild of NgRx's core state-management libraries, module by modu
 
 Every claim in that repo's README/case study is checkable against its own commit history and live CI — see [`docs/case-study.md`](https://github.com/Terrence721/platform-main/blob/main/docs/case-study.md) for the full writeup.
 
-### [saga-full](https://github.com/Terrence721/saga-full) — Principal Full-Stack Engineering Demonstration (Java) *(in progress)*
+### [saga-full](https://github.com/Terrence721/saga-full) — Principal Full-Stack Engineering Demonstration (Java)
 
 A from-scratch implementation of the Distributed Saga pattern across independent microservices — order placement, payment, and fulfillment, coordinated with compensating transactions instead of a shared database transaction. Early stage: build tooling and the first module are in place and verified with a real build; the remaining services are being built one file at a time, with the reasoning behind each decision recorded as it happens.
 
