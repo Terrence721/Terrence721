@@ -37,3 +37,12 @@ A from-scratch implementation of the Distributed Saga pattern across independent
 - Full reasoning for every decision recorded in [`docs/architecture.md`](https://github.com/Terrence721/saga-full/blob/main/docs/architecture.md), progress tracked in [`todo.md`](https://github.com/Terrence721/saga-full/blob/main/todo.md), and work tracked on a public [project board](https://github.com/users/Terrence721/projects/3)
 
 This one's genuinely early — see `todo.md` for current status rather than assuming it's finished.
+
+### [conduit-full](https://github.com/Terrence721/conduit-full) — Full-Stack Engineering Demonstration (React/Express)
+
+An independently modernized fork of the RealWorld Conduit example app — a Medium-style publishing platform (CRUD, auth, pagination) built with React 19/Vite/Express 5/Sequelize/PostgreSQL. Rather than copying the source repo over wholesale, it's being rebuilt one file at a time, with dependencies and patterns brought up to their current latest along the way.
+
+- Yarn workspace, MIT license (original upstream copyright preserved), and CI (ESLint, Prettier, Vitest, CodeQL) in place — none of which existed in the source repo
+- Progress tracked in [`todo.md`](https://github.com/Terrence721/conduit-full/blob/main/todo.md) and on a public [project board](https://github.com/users/Terrence721/projects/4)
+
+This one's genuinely early too — the app itself (backend and frontend) hasn't been added yet, see `todo.md` for current status.
