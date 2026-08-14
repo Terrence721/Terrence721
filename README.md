@@ -46,3 +46,12 @@ An independently modernized fork of the RealWorld Conduit example app — a Medi
 - Yarn workspace, MIT license (original upstream copyright preserved), and CI (ESLint, Prettier, Vitest, CodeQL) in place — none of which existed in the source repo
 
 Every claim here is checkable against this repo's own commit history and live CI — see [`todo.md`](https://github.com/Terrence721/conduit-full/blob/main/todo.md) and the [project board](https://github.com/users/Terrence721/projects/4) for current status. Backend's done; frontend hasn't started yet.
+
+### [eshop-full](https://github.com/Terrence721/eshop-full) — Full-Stack Engineering Demonstration (.NET Aspire)
+
+An independently modernized version of Microsoft's dotnet/eShop reference app — a .NET Aspire microservices e-commerce platform (Catalog, Basket, Ordering, Identity, Payments, Webhooks, Blazor/MAUI frontends, RabbitMQ event bus). Rather than copying the source repo over wholesale, it's being added one file at a time, with every package version individually researched against what's actually current rather than assumed.
+
+- SDK/build config and ~50 central NuGet package versions already researched and added, several real corrections along the way (a package stuck on a .NET-8-era prerelease with a real stable release now available, a license-driven pin to stay on the last MIT-licensed version of a dependency that went commercial, a stale doc reference to a config file that didn't match what was actually on disk)
+- Full reasoning recorded in [`docs/architecturedesign.md`](https://github.com/Terrence721/eshop-full/blob/main/docs/architecturedesign.md), progress tracked in [`todo.md`](https://github.com/Terrence721/eshop-full/blob/main/todo.md), and work tracked on a public [project board](https://github.com/users/Terrence721/projects/5)
+
+This one's brand new — foundation layer just underway, see `todo.md` for current status rather than assuming it's finished.
