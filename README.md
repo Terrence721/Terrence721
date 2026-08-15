@@ -49,9 +49,10 @@ Every claim here is checkable against this repo's own commit history and live CI
 
 ### [eshop-full](https://github.com/Terrence721/eshop-full) — Full-Stack Engineering Demonstration (.NET Aspire)
 
-An independently modernized version of Microsoft's dotnet/eShop reference app — a .NET Aspire microservices e-commerce platform (Catalog, Basket, Ordering, Identity, Payments, Webhooks, Blazor/MAUI frontends, RabbitMQ event bus). Rather than copying the source repo over wholesale, it's being added one file at a time, with every package version individually researched against what's actually current rather than assumed.
+An independently modernized version of Microsoft's dotnet/eShop reference app — a .NET Aspire microservices e-commerce platform (Catalog, Basket, Ordering, Identity, Payments, Webhooks, a React storefront in place of upstream's Blazor, RabbitMQ event bus). Rather than copying the source repo over wholesale, it's being added one file at a time, with every package version individually researched against what's actually current rather than assumed.
 
-- SDK/build config and ~50 central NuGet package versions already researched and added, several real corrections along the way (a package stuck on a .NET-8-era prerelease with a real stable release now available, a license-driven pin to stay on the last MIT-licensed version of a dependency that went commercial, a stale doc reference to a config file that didn't match what was actually on disk)
+- **3 of 20 projects done** (EventBus, EventBusRabbitMQ, eShop.ServiceDefaults), a 4th in progress — real bugs found and fixed along the way, not just version bumps: a Polly retry pipeline that never actually awaited its own operation (so it silently never retried the failures it was configured to catch), a null-conditional that made an error-handling branch unreachable dead code, a disabled JWT audience check that would have let a token issued for one downstream API be replayed against another
+- **First real test suite landed**: MSTest on .NET's newer Microsoft.Testing.Platform runner, 26 passing tests, with CI coverage collection and PR-visible test reporting verified against real GitHub Actions runs, not just written and assumed to work
 - Full reasoning recorded in [`docs/architecturedesign.md`](https://github.com/Terrence721/eshop-full/blob/main/docs/architecturedesign.md), progress tracked in [`todo.md`](https://github.com/Terrence721/eshop-full/blob/main/todo.md), and work tracked on a public [project board](https://github.com/users/Terrence721/projects/5)
 
-This one's brand new — foundation layer just underway, see `todo.md` for current status rather than assuming it's finished.
+This one's still early — see `todo.md` for current status rather than assuming it's finished.
