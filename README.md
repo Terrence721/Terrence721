@@ -12,7 +12,7 @@ An enhanced fork of Coolify (a self-hostable Heroku/Vercel alternative) used as 
 
 - **84/84 pages** migrated from Livewire to Inertia.js + React, one page at a time, each conversion verified with automated tests — not a big-bang rewrite
 - **PHPStan baseline taken from 1,306 → 55** suppressed errors, phase by phase, each phase individually verified with a full test-suite run
-- **1,200+ Pest tests**, real pre-existing bugs found and fixed along the way (documented, not hidden)
+- **1,478 Pest tests**, real pre-existing bugs found and fixed along the way (documented, not hidden)
 - Full Docker Compose dev environment, de-commercialized (billing/subscription surface area removed) for a clean self-hosted fork
 
 Every claim in that repo's README is checkable against its own commit history — see the README's "Reading the commit history" section for exactly how.
