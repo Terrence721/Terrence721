@@ -56,3 +56,14 @@ An independently modernized version of Microsoft's dotnet/eShop reference app �
 - Full reasoning recorded in [`docs/architecturedesign.md`](https://github.com/Terrence721/eshop-full/blob/main/docs/architecturedesign.md), progress tracked in [`todo.md`](https://github.com/Terrence721/eshop-full/blob/main/todo.md), and work tracked on a public [project board](https://github.com/users/Terrence721/projects/5)
 
 This one's still early — see `todo.md` for current status rather than assuming it's finished.
+
+### [directus-main](https://github.com/Terrence721/directus-main) — Full-Stack Engineering Demonstration (Node.js/Vue, Yarn)
+
+An independently maintained port of Directus's own monorepo — a real-time API/App dashboard for managing SQL database content — brought over one package at a time, with its package management switched from pnpm to Yarn along the way rather than left as-is.
+
+- **All 43 workspace packages migrated to Yarn**: pnpm's `catalog:` version-catalog protocol (673 references across 40 files) resolved to pinned versions individually, `pnpm.overrides` translated to Yarn `resolutions`, and 18 GitHub Actions workflows rewritten off pnpm
+- **A real gap found and fixed, not glossed over**: `pnpm deploy` (used to build a standalone production bundle) has no Yarn equivalent — replaced with a custom script (`scripts/deploy-production.mjs`) built on `yarn workspaces focus`, its destructive effect on the root install documented rather than hidden
+- **Genuinely early**: only 1 of 42 workspace packages (the CLI wrapper) has its actual source code copied over yet — the rest are migrated `package.json` manifests, with source trees still to come one at a time
+- Full reasoning recorded in [`architect.md`](https://github.com/Terrence721/directus-main/blob/main/architect.md), progress tracked in [`todo.md`](https://github.com/Terrence721/directus-main/blob/main/todo.md)
+
+This one's genuinely early — see `todo.md` for current status rather than assuming it's finished.
