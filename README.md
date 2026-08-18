@@ -44,9 +44,10 @@ The code-review audit itself is still in progress — see `todo.md` for current 
 An independently modernized fork of the RealWorld Conduit example app — a Medium-style publishing platform (CRUD, auth, pagination) built with React 19/Vite/Express 5/Sequelize/PostgreSQL. Rather than copying the source repo over wholesale, it's being rebuilt one file at a time, with dependencies and patterns brought up to their current latest along the way.
 
 - **Backend complete: 100% TypeScript, 214 tests passing**, 23 real bugs found and fixed along the way (disclosed in `todo.md`, not hidden)
+- **Frontend in progress, TypeScript from file one**: config/tooling, helpers, shared types, and 12 of the ~16 planned API service modules done
 - Yarn workspace, MIT license (original upstream copyright preserved), and CI (ESLint, Prettier, Vitest, CodeQL) in place — none of which existed in the source repo
 
-Every claim here is checkable against this repo's own commit history and live CI — see [`todo.md`](https://github.com/Terrence721/conduit-full/blob/main/todo.md) and the [project board](https://github.com/users/Terrence721/projects/4) for current status. Backend's done; frontend hasn't started yet.
+Every claim here is checkable against this repo's own commit history and live CI — see [`todo.md`](https://github.com/Terrence721/conduit-full/blob/main/todo.md) and the [project board](https://github.com/users/Terrence721/projects/4) for current status.
 
 ### [eshop-full](https://github.com/Terrence721/eshop-full) — Full-Stack Engineering Demonstration (.NET Aspire)
 
