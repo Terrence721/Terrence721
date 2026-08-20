@@ -65,7 +65,7 @@ An independently maintained port of Directus's own monorepo — a real-time API/
 
 - **All 40 workspace packages migrated to Yarn**: pnpm's `catalog:` version-catalog protocol (673 references across 40 files) resolved to pinned versions individually, `pnpm.overrides` translated to Yarn `resolutions`, and 17 GitHub Actions workflows rewritten off pnpm
 - **A real gap found, fixed, then improved again**: `pnpm deploy` (used to build a standalone production bundle) has no Yarn equivalent — replaced with a custom script (`scripts/deploy-production.mjs`) built on `yarn workspaces focus`; an initial version pruned the repo's own root `node_modules` in place, later corrected to run inside a disposable `git worktree` instead, so the live working tree is never touched
-- **Genuinely early**: 2 of 40 workspace packages have real source started — `directus` (the CLI wrapper, complete) and `types` (partial, 48 of ~54 planned files) — the rest are migrated `package.json` manifests, with source trees still to come one at a time
+- **Genuinely early**: 2 of 40 workspace packages have real source started — `directus` (the CLI wrapper, complete) and `types` (partial, 49 of ~54 planned files) — the rest are migrated `package.json` manifests, with source trees still to come one at a time
 - Full reasoning recorded in [`architect.md`](https://github.com/Terrence721/directus-main/blob/main/architect.md), progress tracked in [`todo.md`](https://github.com/Terrence721/directus-main/blob/main/todo.md), and work tracked on a public [project board](https://github.com/users/Terrence721/projects/6)
 
 This one's genuinely early — see `todo.md` for current status rather than assuming it's finished.
