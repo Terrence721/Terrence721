@@ -1,6 +1,6 @@
 # Terrence Daniels
 
-Principal Full-Stack Engineer — Laravel/PHP backend, React/Inertia frontend, containerized infrastructure.
+Principal Full-Stack Engineer — 21+ years across .NET, Java, Angular/NgRx, React, Vue, Node.js & Laravel. Auditing and modernizing real production codebases.
 
 **[LinkedIn](https://www.linkedin.com/in/terrence-daniels)** · **[Portfolio hub ↗](https://terrence721.github.io/)**
 
