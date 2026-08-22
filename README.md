@@ -1,6 +1,6 @@
 # Terrence Daniels
 
-Principal Full-Stack Engineer — 21+ years across .NET, Java, Angular/NgRx, React, Vue, Node.js & Laravel. Auditing and modernizing real production codebases.
+Principal Full-Stack Engineer finding & fixing real defects across .NET, Java, Angular, React, Vue & Node.js/Laravel codebases.
 
 **[LinkedIn](https://www.linkedin.com/in/terrence-daniels)** · **[Portfolio hub ↗](https://terrence721.github.io/)**
 
