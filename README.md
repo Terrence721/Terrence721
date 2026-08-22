@@ -32,12 +32,12 @@ Every claim in that repo's README/case study is checkable against its own commit
 
 A from-scratch implementation of the Distributed Saga pattern across independent microservices — a JWT-guarded API gateway in front of order placement, payment, and fulfillment, coordinated with compensating transactions instead of a shared database transaction. All six backend modules are built and wired end-to-end; a file-by-file code-review audit is now underway, the same discipline already proven on `coolify-full` and `platform-main`.
 
-- **6/6 backend services complete, 107/107 tests passing**, verified against real Postgres and Kafka infrastructure, not mocked
-- **15 real bugs found & fixed** — build-tooling incompatibilities (JDK 25 vs. Gradle, Lombok, Mockito, Spring Boot's bundled ASM), two real security fixes in the login flow (a user-enumeration issue and its timing-side-channel sibling), a live IDOR the code-review audit caught and closed, a Kafka poison-pill gap, a second cross-service log-injection trace, and a data-integrity validation gap — all found and fixed during `order-service`'s code-review pass
+- **6/6 backend services complete, 111/111 tests passing**, verified against real Postgres and Kafka infrastructure, not mocked
+- **17 real bugs found & fixed** — build-tooling incompatibilities (JDK 25 vs. Gradle, Lombok, Mockito, Spring Boot's bundled ASM), two real security fixes in the login flow (a user-enumeration issue and its timing-side-channel sibling), a live IDOR the code-review audit caught and closed, a Kafka poison-pill gap, a second cross-service log-injection trace, a data-integrity validation gap, a payment-decline path that never existed, and a refund compensation that never checked whose order it was refunding — found and fixed across `order-service`'s and `payment-service`'s code-review passes
 - Original gRPC contract design, not a copy of any reference material used only for the module layout
 - Full reasoning for every decision recorded in [`docs/architecture.md`](https://github.com/Terrence721/saga-full/blob/main/docs/architecture.md), progress tracked in [`todo.md`](https://github.com/Terrence721/saga-full/blob/main/todo.md), and work tracked on a public [project board](https://github.com/users/Terrence721/projects/3)
 
-The code-review audit itself is still in progress — `user-contract`, `user-service`, and `order-service` are closed out, `payment-service` is next — see `todo.md` for current status rather than assuming it's finished.
+The code-review audit itself is still in progress — `user-contract`, `user-service`, and `order-service` are closed out, `payment-service` is 11/14 files in — see `todo.md` for current status rather than assuming it's finished.
 
 ### [conduit-full](https://github.com/Terrence721/conduit-full) — Full-Stack Engineering Demonstration (React/Express)
 
