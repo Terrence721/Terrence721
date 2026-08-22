@@ -69,3 +69,14 @@ An independently maintained port of Directus's own monorepo — a real-time API/
 - Full reasoning recorded in [`architect.md`](https://github.com/Terrence721/directus-main/blob/main/architect.md), progress tracked in [`todo.md`](https://github.com/Terrence721/directus-main/blob/main/todo.md), and work tracked on a public [project board](https://github.com/users/Terrence721/projects/6)
 
 This one's genuinely early — see `todo.md` for current status rather than assuming it's finished.
+
+### [AxonFramework-Full](https://github.com/Terrence721/AxonFramework-Full) — Full-Stack Engineering Demonstration (Java/Gradle)
+
+A Maven-to-Gradle build-system migration of [Axon Framework 5](https://github.com/AxonFramework/AxonFramework) — a 14-module Maven reactor converted one file at a time, each file individually inspected against the source and given its own migration decision, rather than an automated conversion tool run or a bulk copy of the source tree.
+
+- **Root `pom.xml` converted**: `settings.gradle.kts` and `gradle.properties` in place, including a faithful replication of Maven's profile-gated module activation (`examples`/`coverage`) as conditional Gradle-property includes, and the project's Central Portal snapshot repository carried over with its original release/snapshot enable flags
+- **Genuinely early**: only root-level scaffolding is done — all 14 reactor modules (`common`, `messaging`, `eventsourcing`, the `extensions` sub-reactor, and more), the build-logic convention plugins, and the version catalog are still ahead, to be converted bottom-up by dependency direction
+- A known, disclosed blocker: Gradle wrapper generation is currently stuck because Gradle won't evaluate `settings.gradle.kts` until every listed module directory exists — expected given the one-file-at-a-time approach, but it means the project isn't buildable yet
+- Full status recorded in [`todo.md`](https://github.com/Terrence721/AxonFramework-Full/blob/main/todo.md), work tracked on a public [project board](https://github.com/users/Terrence721/projects/8)
+
+This one's just getting started — see `todo.md` for current status rather than assuming it's finished.
