@@ -1,6 +1,6 @@
 # Terrence Daniels
 
-Principal Full-Stack Engineer finding & fixing real defects across .NET, Java, Angular, React, Vue & Node.js/Laravel codebases.
+Principal Full-Stack Engineer modernizing real codebases — .NET, Java, TypeScript, Angular, PHP, Vue and Docker — real bugs disclosed, found and fixed.
 
 **[LinkedIn](https://www.linkedin.com/in/terrence-daniels)** · **[Portfolio hub ↗](https://terrence721.github.io/)**
 
