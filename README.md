@@ -22,7 +22,7 @@ Every claim in that repo's README is checkable against its own commit history �
 A from-scratch rebuild of NgRx's core state-management libraries, module by module: real, MIT-licensed source ported where fidelity to a battle-tested implementation matters, and specific classes deliberately redesigned where the original violates its own interface.
 
 - **6 classes redesigned** from RxJS inheritance to composition, fixing a genuine Interface Segregation violation in the real upstream source — found across three audit passes, not a spot-check
-- **5,391 Vitest tests, 0 lint errors**, across all 13 modules added
+- **5,399 Vitest tests, 0 lint errors**, across all 13 modules added
 - **An 18×/4.5× real performance fix**, found by refusing to accept a reporting-config change that only looked like a fix, and tracing it to the actual bug instead
 - **10 CodeQL security findings** (6x ReDoS + 4x prototype pollution) found and fixed in ported source, landed through real Pull Requests
 
