@@ -68,3 +68,13 @@ A Maven-to-Gradle build-system migration of Axon Framework 5 — a 14-module Mav
 - Full status recorded in [`todo.md`](https://github.com/Terrence721/AxonFramework-Full/blob/main/todo.md), work tracked on a public [project board](https://github.com/users/Terrence721/projects/8)
 
 This one's still early — see `todo.md` for current status rather than assuming it's finished.
+
+### [directus-main](https://github.com/Terrence721/directus-main) — Principal Frontend Engineering Demonstration (Vue/Node.js/Yarn)
+
+A redesigned rebuild of Directus's admin-panel state layer, package by package: Pinia stores built fresh from the real project's domain, not reproduced from its source — redesign is the default here, not the exception.
+
+- **`packages/stores` complete**: four Pinia stores (`useAuthStore`, `useUserStore`, `useServerStore`, `useAppStore`), 20 tests, 100% statement/branch/function/line coverage, 0 lint errors, 0 CodeQL findings
+- **Two independent-refs-that-must-stay-in-sync bugs found and prevented by design**, not patched over — both `useAuthStore`'s session state and `useAppStore`'s hydration state were collapsed into a single discriminated value so the invalid combination can't be represented at all
+- A completeness audit — prompted by comparing this package's own file count against the real source — found and fixed 4 real gaps that 100% test coverage alone hadn't caught
+
+This one's still early — see [`todo.md`](https://github.com/Terrence721/directus-main/blob/main/todo.md) for current status rather than assuming it's finished.
