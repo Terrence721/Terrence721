@@ -71,10 +71,11 @@ This one's still early — see `todo.md` for current status rather than assuming
 
 ### [directus-main](https://github.com/Terrence721/directus-main) — Principal Frontend Engineering Demonstration (Vue/Node.js/Yarn)
 
-A redesigned rebuild of Directus's admin-panel state layer, package by package: Pinia stores built fresh from the real project's domain, not reproduced from its source — redesign is the default here, not the exception.
+A redesigned rebuild of Directus's admin-panel state layer, package by package — now including a real, deployed Vue app: Pinia stores and a `DirectusError` class hierarchy built fresh from the real project's domain, not reproduced from its source.
 
-- **`packages/stores` complete**: four Pinia stores (`useAuthStore`, `useUserStore`, `useServerStore`, `useAppStore`), 20 tests, 100% statement/branch/function/line coverage, 0 lint errors, 0 CodeQL findings
+- **[Try the live app](https://terrence721.github.io/directus-main/app/)**: routed login/home pages (`vue-router`), a working auth flow against a simulated client, and a logout button — `demo@directus-main.dev` / `demo1234`, or anything else to see the real error path
+- **3 packages complete**: `stores` (four Pinia stores, 20 tests, 100% coverage), `constants`, and `errors` (a real class hierarchy, redesigned away from the source's factory-function-plus-enum pattern)
 - **Two independent-refs-that-must-stay-in-sync bugs found and prevented by design**, not patched over — both `useAuthStore`'s session state and `useAppStore`'s hydration state were collapsed into a single discriminated value so the invalid combination can't be represented at all
-- A completeness audit — prompted by comparing this package's own file count against the real source — found and fixed 4 real gaps that 100% test coverage alone hadn't caught
+- A repo-wide drift sweep found and fixed a real test-isolation bug (leaked component instances interfering with later tests via a shared router) plus several stale docs and issues — this entry included
 
 This one's still early — see [`todo.md`](https://github.com/Terrence721/directus-main/blob/main/todo.md) for current status rather than assuming it's finished.
