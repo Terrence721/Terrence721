@@ -81,11 +81,11 @@ A redesigned rebuild of Directus's admin-panel state layer, package by package �
 
 This one's still early — see [`todo.md`](https://github.com/Terrence721/directus-main/blob/main/todo.md) for current status rather than assuming it's finished.
 
-### [GridPulse](https://github.com/Terrence721/GridPulse) — Principal Full-Stack Engineering Demonstration (.NET Aspire/Angular/Kafka)
+### [GridPulse](https://github.com/Terrence721/GridPulse) — Principal Full-Stack Engineering Demonstration (.NET Aspire/React/Kafka)
 
 An original, from-scratch event-driven platform simulating a utility company's meter-reading, usage-aggregation, and billing pipeline — not a fork or a cloned reference app. Designed to exercise the same skills a Principal Developer role expects: microservices decomposition, event streaming, resilient service-to-service communication, CI/CD, and production-grade observability, with the full architecture, event contracts, and rationale written up before a line of service code was.
 
-- Deliberately staged across 6 build phases: a direct-REST core loop (Meter Simulator → Usage Aggregation → Billing) on a single Postgres database first, then Kafka + a schema registry, a polyglot Node.js Notification Service, an Angular/NgRx dashboard behind a BFF gateway, GitHub Actions CI/CD, and OpenTelemetry observability layered in one phase at a time
+- Deliberately staged across 6 build phases: a direct-REST core loop (Meter Simulator → Usage Aggregation → Billing) on a single Postgres database first, then Kafka + a schema registry, a polyglot Node.js Notification Service, a React/Redux Toolkit dashboard behind a BFF gateway, GitHub Actions CI/CD, and OpenTelemetry observability layered in one phase at a time
 - .NET Aspire orchestrating every service from day one; rate-plan billing logic designed around the Strategy pattern, documented in the [design document](https://github.com/Terrence721/GridPulse/blob/main/docs/gridpulse-design-doc.html)
 
 Just getting underway — see the [README](https://github.com/Terrence721/GridPulse#-build-phases) for current phase status rather than assuming it's further along.
