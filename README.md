@@ -74,8 +74,8 @@ This one's still early — see `todo.md` for current status rather than assuming
 
 A redesigned rebuild of Directus's admin-panel state layer, package by package — now including a real, deployed Vue app: Pinia stores and a `DirectusError` class hierarchy built fresh from the real project's domain, not reproduced from its source.
 
-- **[Try the live app](https://terrence721.github.io/directus-main/app/)**: routed login/home pages (`vue-router`), a working auth flow against a simulated client, and a logout button — `demo@directus-main.dev` / `demo1234`, or anything else to see the real error path
-- **3 packages complete**: `stores` (four Pinia stores, 20 tests, 100% coverage), `constants`, and `errors` (a real class hierarchy, redesigned away from the source's factory-function-plus-enum pattern)
+- **[Try the live app](https://terrence721.github.io/directus-main/app/)**: routed login/home pages (`vue-router`), a working auth flow whose session now survives a hard refresh, and a logout button — `demo@directus-main.dev` / `demo1234`, or anything else to see the real error path
+- **3 packages complete, `api/` now in progress**: `stores` (four Pinia stores, 20 tests, 100% coverage), `constants`, and `errors` (a real class hierarchy, redesigned away from the source's factory-function-plus-enum pattern) — plus a real Express server with a tested `/auth/login`, not yet wired into the app
 - **Two independent-refs-that-must-stay-in-sync bugs found and prevented by design**, not patched over — both `useAuthStore`'s session state and `useAppStore`'s hydration state were collapsed into a single discriminated value so the invalid combination can't be represented at all
 - A repo-wide drift sweep found and fixed a real test-isolation bug (leaked component instances interfering with later tests via a shared router) plus several stale docs and issues — this entry included
 
