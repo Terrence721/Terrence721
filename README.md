@@ -90,3 +90,11 @@ An original, from-scratch event-driven platform simulating a utility company's m
 - 23 real bugs found and fixed by actually running the thing, not just compiling it — logged in [`todo.md`](https://github.com/Terrence721/GridPulse/blob/main/todo.md)
 
 Phases 1 through 3 complete, plus ESPI, Stripe, and Grid Operations (outage detection & work orders) — see the [README](https://github.com/Terrence721/GridPulse#-build-phases) for current phase status rather than assuming it's further along.
+
+### [BEX](https://github.com/Terrence721/BEX) — FX Strategy Platform Design (Architecture / .NET Core, GCP, React)
+
+A ground-up architecture and design document for an FX strategy platform serving broker-dealer and commercial-banking needs — design phase only, no service code written yet. The core idea: every FX trading behavior (market making, TWAP/VWAP execution, smart order routing, last look, hedging, NDF pricing) is designed as an interchangeable implementation of one `IFxStrategy` interface, built directly on the GoF Strategy pattern and selected/versioned at runtime instead of hardcoded per client or desk.
+
+- Full [design doc](https://github.com/Terrence721/BEX/blob/main/docs/fx-strategy-engine-design.md): business requirements (broker-dealer vs. commercial-bank FX needs), the strategy-pattern engine design, a 10-strategy catalog, GCP microservice architecture (GKE, Pub/Sub, Cloud SQL), CI/CD with canary-by-traffic-slice strategy promotion, security/compliance controls, and a phased rollout plan
+- Dev environment isolated via a Dev Container (.NET 8 + Node 20, 19 scoped VS Code extensions) so working on it doesn't touch or conflict with any other project's global tooling
+- This is architecture/design work, not a running system — see the repo for current status rather than assuming an implementation exists
