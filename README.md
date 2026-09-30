@@ -23,6 +23,7 @@ A from-scratch rebuild of NgRx's core state-management libraries, module by modu
 
 - **6 classes redesigned** from RxJS inheritance to composition, fixing a genuine Interface Segregation violation in the real upstream source — found across three audit passes, not a spot-check
 - **6,466 Vitest tests, 0 lint errors**, across all 13 modules added
+- **Code-review audit complete: all 13 modules, 270/270 files**, each with its own issue and reviewed PR — including an aliased import that silently turned off 14 of the ESLint plugin's rules, and a state property name that permanently broke `patchState`
 - **An 18×/4.5× real performance fix**, found by refusing to accept a reporting-config change that only looked like a fix, and tracing it to the actual bug instead
 - **10 CodeQL security findings** (6x ReDoS + 4x prototype pollution) found and fixed in ported source, landed through real Pull Requests
 
