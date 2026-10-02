@@ -22,9 +22,10 @@ Every claim in that repo's README is checkable against its own commit history �
 A from-scratch rebuild of NgRx's core state-management libraries, module by module: real, MIT-licensed source ported where fidelity to a battle-tested implementation matters, and specific classes deliberately redesigned where the original violates its own interface.
 
 - **6 classes redesigned** from RxJS inheritance to composition, fixing a genuine Interface Segregation violation in the real upstream source — found across three audit passes, not a spot-check
-- **6,466 Vitest tests, 0 lint errors**, across all 13 modules added
-- **Code-review audit complete: all 13 modules, 270/270 files**, each with its own issue and reviewed PR — including an aliased import that silently turned off 14 of the ESLint plugin's rules, and a state property name that permanently broke `patchState`
+- **7,046 Vitest tests, 0 lint errors**, across all 13 modules and the Helpdesk app
+- **Code-review audit complete: all 13 modules, 270/270 files**, each with its own issue and reviewed PR — including an aliased import that silently turned off 14 of the ESLint plugin's rules, and a state property name that permanently broke `patchState`. Then the 31 `ng update` migrations, reviewed the same way (27 fixed), and type-level tests for every module's public API (11 type mismatches and 3 runtime bugs found)
 - **An 18×/4.5× real performance fix**, found by refusing to accept a reporting-config change that only looked like a fix, and tracing it to the actual bug instead
+- **Now building a real app on top of it, not a demo:** a help desk that uses every module, with a NestJS API, PostgreSQL and real sign-in ([#303](https://github.com/Terrence721/platform-main/issues/303))
 - **10 CodeQL security findings** (6x ReDoS + 4x prototype pollution) found and fixed in ported source, landed through real Pull Requests
 
 Every claim in that repo's README/case study is checkable against its own commit history and live CI — see [`docs/case-study.md`](https://github.com/Terrence721/platform-main/blob/main/docs/case-study.md) for the full writeup.
