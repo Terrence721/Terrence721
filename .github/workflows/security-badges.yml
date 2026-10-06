@@ -1,15 +1,15 @@
 name: Security badges
 
-# Keeps the README's Security section current: one badge per public repo
-# with its open Dependabot alerts (scripts/security-badges.mjs). Commits
-# only when a count changed.
+# Keeps badges/<repo>.json current: each public repo's open Dependabot
+# alerts as a shields.io endpoint badge (scripts/security-badges.mjs), which
+# that repo's README shows. Commits only when a badge changed.
 
 on:
   schedule:
     - cron: "0 6 * * *" # daily, 06:00 UTC
   workflow_dispatch:
 
-# Pushing the README is all this workflow's own token does.
+# Pushing the badge files is all this workflow's own token does.
 permissions:
   contents: write
 
@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   badges:
-    name: Update the Security section
+    name: Update the badge files
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,19 +32,20 @@ jobs:
 
       # Alerts need a token that can read them: a fine-grained token with
       # "Dependabot alerts: Read-only" on all repos, stored as a secret.
-      - name: Count open alerts and rewrite the section
+      - name: Count open alerts and write the badge files
         run: node scripts/security-badges.mjs
         env:
           GH_TOKEN: ${{ secrets.DEPENDABOT_ALERTS_TOKEN }}
 
-      - name: Commit the README if it changed
+      # Staged first, so new and removed files count as changes too.
+      - name: Commit the badge files if they changed
         run: |
-          if git diff --quiet README.md; then
+          git add --all badges
+          if git diff --cached --quiet; then
             echo "No change."
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md
           git commit -m 'Security badges: update open Dependabot alert counts'
           git push
