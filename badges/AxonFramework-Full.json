@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "label": "security",
+  "message": "3 alerts",
+  "color": "red",
+  "cacheSeconds": 3600
+}

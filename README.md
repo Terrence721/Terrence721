@@ -4,25 +4,6 @@ Principal Full-Stack Engineer modernizing real codebases — .NET, Java, TypeScr
 
 **[LinkedIn](https://www.linkedin.com/in/terrence-daniels)** · **[Portfolio hub ↗](https://terrence721.github.io/)**
 
-## Security
-
-<!-- security-badges:start -->
-
-[![AxonFramework-Full: 3 alerts](https://img.shields.io/badge/AxonFramework--Full-3%20alerts-red)](https://github.com/Terrence721/AxonFramework-Full/security)
-[![BEX: 0 alerts](https://img.shields.io/badge/BEX-0%20alerts-brightgreen)](https://github.com/Terrence721/BEX/security)
-[![conduit-full: 18 alerts](https://img.shields.io/badge/conduit--full-18%20alerts-red)](https://github.com/Terrence721/conduit-full/security)
-[![coolify-full: 13 alerts](https://img.shields.io/badge/coolify--full-13%20alerts-red)](https://github.com/Terrence721/coolify-full/security)
-[![directus-main: 11 alerts](https://img.shields.io/badge/directus--main-11%20alerts-red)](https://github.com/Terrence721/directus-main/security)
-[![eshop-full: 11 alerts](https://img.shields.io/badge/eshop--full-11%20alerts-red)](https://github.com/Terrence721/eshop-full/security)
-[![GridPulse: 0 alerts](https://img.shields.io/badge/GridPulse-0%20alerts-brightgreen)](https://github.com/Terrence721/GridPulse/security)
-[![platform-main: 2 alerts](https://img.shields.io/badge/platform--main-2%20alerts-red)](https://github.com/Terrence721/platform-main/security)
-[![saga-full: 0 alerts](https://img.shields.io/badge/saga--full-0%20alerts-brightgreen)](https://github.com/Terrence721/saga-full/security)
-[![TournamentTracker: 0 alerts](https://img.shields.io/badge/TournamentTracker-0%20alerts-brightgreen)](https://github.com/Terrence721/TournamentTracker/security)
-
-Open Dependabot alerts in each public repo, updated daily by [a GitHub Action](.github/workflows/security-badges.yml).
-
-<!-- security-badges:end -->
-
 ## Featured projects
 
 ### [coolify-full](https://github.com/Terrence721/coolify-full) — Principal Full-Stack Engineering Demonstration
