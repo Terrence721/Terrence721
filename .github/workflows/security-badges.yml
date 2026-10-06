@@ -1,0 +1,50 @@
+name: Security badges
+
+# Keeps the README's Security section current: one badge per public repo
+# with its open Dependabot alerts (scripts/security-badges.mjs). Commits
+# only when a count changed.
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # daily, 06:00 UTC
+  workflow_dispatch:
+
+# Pushing the README is all this workflow's own token does.
+permissions:
+  contents: write
+
+concurrency:
+  group: security-badges
+  cancel-in-progress: false
+
+jobs:
+  badges:
+    name: Update the Security section
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      # Alerts need a token that can read them: a fine-grained token with
+      # "Dependabot alerts: Read-only" on all repos, stored as a secret.
+      - name: Count open alerts and rewrite the section
+        run: node scripts/security-badges.mjs
+        env:
+          GH_TOKEN: ${{ secrets.DEPENDABOT_ALERTS_TOKEN }}
+
+      - name: Commit the README if it changed
+        run: |
+          if git diff --quiet README.md; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m 'Security badges: update open Dependabot alert counts'
+          git push
